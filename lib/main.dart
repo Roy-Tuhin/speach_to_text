@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
   /// the platform returns recognized words.
   void _onSpeechResult(SpeechRecognitionResult result) {
     setState(() {
-     _lastWords += result.recognizedWords; // concatenate new text with previous text
+     _lastWords = result.recognizedWords; // concatenate new text with previous text
        _textController.text = _lastWords;
     });
   }
